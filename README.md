@@ -1,7 +1,16 @@
-# Vue 3 + Vite
+Tecnologie Utilizzate
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+-Vite: Strumento di build e sviluppo basato su ES modules per un'esperienza di sviluppo rapida e leggera.
+-Vue.js: Framework JavaScript per la creazione di interfacce utente reattive e componenti modulari.
+-JavaScript 
 
-## Recommended IDE Setup
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+========
+
+
+-public/: Contiene i file statici come index.html e favicon.ico.
+-src/: Contiene il codice sorgente dell'applicazione.
+-assets/: Contiene le risorse statiche come immagini e icone.
+-components/: Contiene i componenti Vue.js riutilizzabili, come ComicCard.vue e ComicList.vue.
+-App.vue: Il componente principale dell'applicazione.
+-package.json: Contiene le informazioni sul progetto e le dipendenze.
