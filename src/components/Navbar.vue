@@ -20,3 +20,34 @@
     </ul>
   </nav>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      activeItem: null,
+      sections: [
+        { title: "CHARACTERS" },
+        { title: "COMICS" },
+        { title: "MOVIES" },
+        { title: "TV" },
+        { title: "GAMES" },
+        { title: "COLLECTIBLES" },
+        { title: "VIDEOS" },
+        { title: "FANS" },
+        { title: "NEWS" },
+        { title: "SHOP" },
+      ],
+    };
+  },
+  methods: {
+    activateItem(index) {
+      this.activeItem = index;
+    },
+    deactivateItem(index) {
+      this.activeItem = null;
+    },
+  },
+};
+</script>
+
