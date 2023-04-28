@@ -76,6 +76,7 @@ export default {
   display: flex;
   align-items: center;
   margin-right: 4rem;
+  cursor: pointer;
 
 }
 

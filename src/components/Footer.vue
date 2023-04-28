@@ -160,6 +160,7 @@ li{
   display: flex;
   justify-content: space-between;
   margin-left: 20px;
+  cursor: pointer;
   
 }
 
