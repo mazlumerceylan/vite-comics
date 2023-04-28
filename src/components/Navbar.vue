@@ -51,3 +51,55 @@ export default {
 };
 </script>
 
+<style lang="scss" scoped>
+.header-line{
+  width: 100%;
+  height: 50px;
+  background-color: black;
+}
+
+nav {
+  width: 70%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  background-color: white;
+}
+
+img{
+  width: 50px;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  cursor: pointer;
+  color: black;
+  position: relative;
+  &.active {
+    color: blue;
+  }
+}
+
+.menu li:hover .hover-line {
+  width: 100%;
+}
+
+.hover-line {
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: red;
+  transition: width 0.3s ease;
+}
+</style>
