@@ -17,3 +17,34 @@
     </div>
   </main>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      cards: [
+        {
+          image: "src/assets/img/buy-comics-digital-comics.png",
+          text: "DIGITAL COMICS",
+        },
+        {
+          image: "src/assets/img/buy-comics-merchandise.png",
+          text: "DC MERCHANDISE",
+        },
+        {
+          image: "src/assets/img/buy-comics-subscriptions.png",
+          text: "SUBSCRIPTION",
+        },
+        {
+          image: "src/assets/img/buy-comics-shop-locator.png",
+          text: "COMIC SHOP LOCATOR",
+        },
+        {
+          image: "src/assets/img/buy-comics-subscriptions.png",
+          text: "DC POWER VISA",
+        },
+      ],
+    };
+  },
+};
+</script>
