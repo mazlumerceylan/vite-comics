@@ -48,3 +48,44 @@ export default {
   },
 };
 </script>
+
+<style lang="scss" scoped>
+.content {
+  background-color: black;
+  color: white;
+  font-size: 50px;
+  height: 200px;
+}
+
+.blue-bar {
+  background-color: #1e90ff;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-container {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  padding: 0 1rem;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  margin-right: 4rem;
+
+}
+
+.card img{
+  width: 50px;
+}
+
+.text {
+  font-size: 10px;
+  color: white;
+  margin-left: 1rem;
+}
+</style>
