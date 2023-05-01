@@ -64,7 +64,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem;
+  padding: 1rem;
   background-color: white;
 }
 
@@ -77,7 +77,7 @@ img{
   list-style: none;
   gap: 1rem;
   margin: 0;
-  padding: 0;
+  padding: 20px;
 }
 
 .menu li {
