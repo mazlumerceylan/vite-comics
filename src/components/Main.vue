@@ -1,7 +1,23 @@
 <template>
   <main>
+    <div class="jumbo">
+      <img src="../assets/img/jumbotron.jpg" alt="">
+      <span>CURRENT SERIES</span>
+    </div>
     <div class="content">
-      Content goes here
+      <h1>Comics</h1>
+      <div class="comics-container">
+        <div
+          v-for="comic in comicsData"
+          :key="comic.series"
+          class="comic-card"
+        >
+          <img :src="comic.thumb" alt="Comic thumbnail" />
+          <h3>{{ comic.series }}</h3>
+          <p>{{ comic.type }}</p>
+          <p>{{ comic.price }}</p>
+        </div>
+      </div>
     </div>
     <div class="blue-bar">
       <div class="card-container">
@@ -19,7 +35,19 @@
 </template>
 
 <script>
+import { ref, onMounted } from 'vue';
+
 export default {
+  setup() {
+    const comicsData = ref([]);
+
+    onMounted(async () => {
+      const response = await fetch('./dc-comics.json');
+      comicsData.value = await response.json();
+    });
+
+    return { comicsData };
+  },
   data() {
     return {
       cards: [
@@ -50,11 +78,57 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+
+.jumbo{
+  overflow: hidden;
+  height: 350px;
+}
+  img{
+   width: 100%;
+  }
 .content {
+  text-align: center;
   background-color: black;
   color: white;
   font-size: 50px;
+  
+}
+
+.comics-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.comic-card {
+  border-radius: 5px;
+  padding: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 170px;
+
+}
+
+.comic-card img {
+  width: 100%;
   height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.comic-card h3 {
+  font-size: 18px;
+  margin: 0.5rem 0;
+  cursor: pointer;
+}
+
+.comic-card p {
+  font-size: 14px;
+  margin: 0;
+  cursor: pointer;
 }
 
 .blue-bar {
@@ -77,10 +151,9 @@ export default {
   align-items: center;
   margin-right: 4rem;
   cursor: pointer;
-
 }
 
-.card img{
+.card img {
   width: 50px;
 }
 
