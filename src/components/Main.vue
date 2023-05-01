@@ -2,10 +2,9 @@
   <main>
     <div class="jumbo">
       <img src="../assets/img/jumbotron.jpg" alt="">
-      <span>CURRENT SERIES</span>
     </div>
     <div class="content">
-      <h1>Comics</h1>
+      <button class="current-series">CURRENT SERIES</button>
       <div class="comics-container">
         <div
           v-for="comic in comicsData"
@@ -17,6 +16,7 @@
           <p>{{ comic.type }}</p>
           <p>{{ comic.price }}</p>
         </div>
+        <button class="load-more-btn">Load More</button>
       </div>
     </div>
     <div class="blue-bar">
@@ -78,20 +78,50 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 
-.jumbo{
+.jumbo {
+  position: relative;
   overflow: hidden;
   height: 350px;
 }
   img{
    width: 100%;
   }
-.content {
+  .content {
+  position: relative; /* Aggiunto per posizionare il bottone correttamente */
   text-align: center;
   background-color: black;
   color: white;
-  font-size: 50px;
+}
+
+.current-series {
+  position: absolute;
+  top: -20px; /* Posiziona il bottone a metà tra il jumbotron e il contenitore sottostante */
+  left: 25%;
+  transform: translate(-50%, 0);
+  font-size: 16px;
+  color: white;
+  background-color: #1e90ff;
+  border-radius: 5px;
+  padding: 12px 24px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: #007bff;
+  }
+}
+.content {
+  padding-top: 30px;
+  text-align: center;
+  background-color: black;
+  color: white;
   
 }
 
@@ -99,8 +129,8 @@ export default {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 1rem;
-  padding: 1rem;
+  width: 70%;
+  margin: 0 auto;
 }
 
 .comic-card {
@@ -129,6 +159,21 @@ export default {
   font-size: 14px;
   margin: 0;
   cursor: pointer;
+}
+
+.load-more-btn {
+  font-size: 16px;
+  color: white;
+  background-color: #1e90ff;
+  border-radius: 5px;
+  padding: 12px 24px;
+  margin: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: #007bff;
+  }
 }
 
 .blue-bar {
